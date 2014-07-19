@@ -1,3 +1,3 @@
 it's my stuff/config repo...
 =====
-
+conky configuraton inspired by [ivyl](https://github.com/ivyl/i3-config) 
