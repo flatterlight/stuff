@@ -170,11 +170,12 @@ assign [class="Firefox"] 2
 assign [class="Thunderbird"] 3
 exec --no-startup-id nm-applet
 
+#shortcuts and functionkey
 bindsym XF86AudioRaiseVolume exec "amixer -q set Master playback 5dB+ unmute"
 bindsym XF86AudioLowerVolume exec "amixer -q set Master playback 5dB- unmute"
 bindsym XF86AudioMute exec "amixer -q set Master toggle"
 bindsym XF86AudioMicMute exec "amixer -q set Caputure toggle"
-bindsym XF86ScreenSaver exec i3lock -d
+bindsym XF86ScreenSaver exec i3lock -c 000000-d
 bindsym XF86AudioPlay exec "~/.bin/player toggle"
 bindsym XF86AudioStop exec "~/.bin/player stop"
 bindsym XF86AudioNext exec "~/.bin/player next"
@@ -185,7 +186,7 @@ bindsym XF86Display exec "arandr"
 
 
 
-#shutdown and reboot..
+#shutdown and reboots...
 set $mode_system (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown System
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3exit lock, mode "default"
