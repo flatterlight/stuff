@@ -192,10 +192,10 @@ bindsym XF86Display exec "arandr"
 #shutdown and reboots...
 set $power_mode (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown System
 mode "$power_mode" {
-    bindsym l exec --no-startup-id i3exit lock#, mode "default"
-    bindsym e exec --no-startup-id i3exit logout, mode "default"
-    bindsym s exec --no-startup-id i3exit suspend, mode "default"
-    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+    bindsym l exec --no-startup-id i3lock -c 000000 -d, mode "default"
+    bindsym e exec --no-startup-id i3-msg, mode "default"
+    bindsym s exec --no-startup-id i3lock -c 000000 -d && systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id i3lock -c 000000 -d && systemctl hibernate, mode "default"
     bindsym Shift+r exec --no-startup-id i3exit reboot, mode "default"
     bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"  
     # back to normal: Enter or Escape
@@ -203,4 +203,3 @@ mode "$power_mode" {
 	bindsym Escape mode "default"
              }
 bindsym $mod+Print mode "$power_mode"
-   
