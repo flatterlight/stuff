@@ -174,17 +174,17 @@ exec --no-startup-id nm-applet
 workspace 2 output HDMI3
 
 #shortcuts and functionkeys
-bindsym XF86AudioRaiseVolume exec "amixer -q set Master playback 5dB+ unmute"
-bindsym XF86AudioLowerVolume exec "amixer -q set Master playback 5dB- unmute"
+bindsym XF86AudioRaiseVolume exec "amixer -q set Master Playback 3300+ unmute"
+bindsym XF86AudioLowerVolume exec "amixer -q set Master Playback 3300- unmute"
 bindsym XF86AudioMute exec "amixer -q set Master toggle"
-bindsym XF86AoMicMute exec "amixer -q set Caputure toggle"
+bindsym XF86AuMicMute exec "amixer -q set Caputure toggle"
 bindsym XF86ScreenSaver exec i3lock -c 000000 -d
 bindsym XF86AudioPlay exec "~/.bin/player toggle"
 bindsym XF86AudioStop exec "~/.bin/player stop"
 bindsym XF86AudioNext exec "~/.bin/player next"
 bindsym XF86AudioPrev exec "~/.bin/player previous"
-bindsym XF86KbdBrightnessDown exec "sudo /opt/kbdlight/bin/kbdlight -"
-bindsym XF86KbdBrightnessUp exec "sudo /opt/kbdlight/bin/kbdlight +"
+bindsym XF86MonBrightnessDown exec "/usr/bin/xbacklight -dec 2"
+bindsym XF86MonBrightnessUp exec "/usr/bin/xbacklight -inc 2"
 bindsym XF86Display exec "arandr"
 
 
@@ -195,7 +195,7 @@ mode "$power_mode" {
     bindsym l exec --no-startup-id i3lock -c 000000 -d, mode "default"
     bindsym e exec --no-startup-id i3-msg, mode "default"
     bindsym s exec --no-startup-id i3lock -c 000000 -d && systemctl suspend, mode "default"
-    bindsym h exec --no-startup-id i3lock -c 000000 -d && systemctl hibernate, mode "default"
+    bindsym h exec --no-startup-id i3lock -c 000000 -d && systemctl hibernate#, mode "default"
     bindsym Shift+r exec --no-startup-id i3exit reboot, mode "default"
     bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"  
     # back to normal: Enter or Escape
