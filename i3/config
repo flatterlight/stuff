@@ -177,7 +177,7 @@ workspace 2 output HDMI3
 bindsym XF86AudioRaiseVolume exec "amixer -q set Master Playback 3300+ unmute"
 bindsym XF86AudioLowerVolume exec "amixer -q set Master Playback 3300- unmute"
 bindsym XF86AudioMute exec "amixer -q set Master toggle"
-bindsym XF86AuMicMute exec "amixer -q set Caputure toggle"
+bindsym XF86AudioMicMute exec "amixer -q set Capture toggle"
 bindsym XF86ScreenSaver exec i3lock -c 000000 -d
 bindsym XF86AudioPlay exec "~/.bin/player toggle"
 bindsym XF86AudioStop exec "~/.bin/player stop"
