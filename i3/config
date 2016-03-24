@@ -170,15 +170,17 @@ assign [class="Firefox"] 2
 assign [class="Thunderbird"] 3
 assign [class="Skype"] 9
 exec --no-startup-id nm-applet
+
 #move workspaces to specific screen
 workspace 2 output HDMI3
+#workspace 3 output LVDS1
 
 #shortcuts and functionkeys
 bindsym XF86AudioRaiseVolume exec "amixer -q set Master Playback 3300+ unmute"
 bindsym XF86AudioLowerVolume exec "amixer -q set Master Playback 3300- unmute"
 bindsym XF86AudioMute exec "amixer -q set Master toggle"
 bindsym XF86AudioMicMute exec "amixer -q set Capture toggle"
-bindsym XF86ScreenSaver exec i3lock -c 000000 -d
+bindsym XF86ScreenSaver exec "i3lock -dc 000000"
 bindsym XF86AudioPlay exec "~/.bin/player toggle"
 bindsym XF86AudioStop exec "~/.bin/player stop"
 bindsym XF86AudioNext exec "~/.bin/player next"
@@ -195,9 +197,9 @@ mode "$power_mode" {
     bindsym l exec --no-startup-id i3lock -c 000000 -d, mode "default"
     bindsym e exec --no-startup-id i3-msg, mode "default"
     bindsym s exec --no-startup-id i3lock -c 000000 -d && systemctl suspend, mode "default"
-    bindsym h exec --no-startup-id i3lock -c 000000 -d && systemctl hibernate#, mode "default"
-    bindsym Shift+r exec --no-startup-id i3exit reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"  
+    bindsym h exec --no-startup-id i3lock -c 000000 -d && systemctl hibernate, mode "default"
+    bindsym shift+r exec reboot, mode "default"
+    bindsym shift+s exec poweroff , mode "default"
     # back to normal: Enter or Escape
 	bindsym Return mode "default"
 	bindsym Escape mode "default"
