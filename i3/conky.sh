@@ -1,4 +1,4 @@
 #!/bin/sh
 echo "{\"version\":1}"
 echo "[[]"
-conky -c ~/.i3/conky.conf
+conky -c ~/.config/i3/conky.conf
