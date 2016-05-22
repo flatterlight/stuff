@@ -186,8 +186,8 @@ bindsym XF86AudioPlay exec "~/.bin/player toggle"
 bindsym XF86AudioStop exec "~/.bin/player stop"
 bindsym XF86AudioNext exec "~/.bin/player next"
 bindsym XF86AudioPrev exec "~/.bin/player previous"
-bindsym XF86MonBrightnessDown exec "/usr/bin/xbacklight -dec 2"
-bindsym XF86MonBrightnessUp exec "/usr/bin/xbacklight -inc 2"
+bindsym XF86MonBrightnessDown exec "/usr/bin/xbacklight -dec 6"
+bindsym XF86MonBrightnessUp exec "/usr/bin/xbacklight -inc 6"
 bindsym XF86Display exec "arandr"
 
 
