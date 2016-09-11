@@ -106,7 +106,7 @@ bindsym $mod+0 workspace 10
 
 #move workspace to other output
 bindsym $mod+o move workspace to output up
-
+#bindsym $mod+l move workspace to output down
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
 bindsym $mod+Shift+2 move container to workspace 2
@@ -170,6 +170,8 @@ exec --no-startup-id feh --bg-scale ~/Bilder/bg.png
 assign [class="Firefox"] 2
 assign [class="Thunderbird"] 3
 assign [class="Kontact"] 3
+assign [class="arandr"] 1
+assign [class="Steam"] 9
 exec --no-startup-id nm-applet
 
 #move workspaces to specific screen
@@ -189,7 +191,6 @@ bindsym XF86AudioPrev exec "~/.bin/player previous"
 bindsym XF86MonBrightnessDown exec "/usr/bin/xbacklight -dec 6"
 bindsym XF86MonBrightnessUp exec "/usr/bin/xbacklight -inc 6"
 bindsym XF86Display exec "arandr"
-
 
 
 #shutdown and reboots...
