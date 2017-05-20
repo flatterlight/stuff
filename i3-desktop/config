@@ -27,7 +27,11 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal #default shortcut is mod+Return
+#bindsym $mod+Return exec i3-sensible-terminal #default shortcut is mod+Return
+#start xfce4-terminal not default
+bindsym $mod+Return exec xfce4-terminal
+#start i3-sensibe-terminal instead
+bindsym $mod+Shift+Return exec i3-sensible-terminal 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -170,7 +174,7 @@ bar {
 exec --no-startup-id feh --bg-scale ~/Bilder/bg.png
 assign [class="Firefox"] 2
 assign [class="Thunderbird"] 3
-assign [class="Kontact"] 3
+assign [class="HexChat"] 4
 assign [class="arandr"] 1
 assign [class="Steam"] 9
 #exec --no-startup-id nm-applet
