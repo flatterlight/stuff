@@ -44,7 +44,7 @@ bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+l focus up
-bindsym $mod+odiaeresis focus right
+bindsym $mod+ö focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -56,7 +56,7 @@ bindsym $mod+Right focus right
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
 bindsym $mod+Shift+l move up
-bindsym $mod+Shift+odiaeresis move right
+bindsym $mod+Shift+ö move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -173,7 +173,7 @@ assign [class="Thunderbird"] 3
 assign [class="Kontact"] 3
 assign [class="arandr"] 1
 assign [class="Steam"] 9
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 
 #move workspaces to specific screen
 workspace 2 output HDMI3
@@ -193,12 +193,10 @@ bindsym XF86MonBrightnessDown exec "/usr/bin/xbacklight -dec 6"
 bindsym XF86MonBrightnessUp exec "/usr/bin/xbacklight -inc 6"
 bindsym XF86Display exec "arandr"
 
-
 #shutdown and reboots...
-set $power_mode (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown System
+set $power_mode (l) lock, (s) suspend, (h) hibernate, (Shift+r) reboot, (Shift+s) shutdown System
 mode "$power_mode" {
     bindsym l exec --no-startup-id i3lock -c 000000 -d, mode "default"
-    bindsym e exec --no-startup-id i3-msg, mode "default"
     bindsym s exec --no-startup-id i3lock -c 000000 -d && systemctl suspend, mode "default"
     bindsym h exec --no-startup-id i3lock -c 000000 -d && systemctl hibernate, mode "default"
     bindsym shift+r exec reboot, mode "default"
