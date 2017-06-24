@@ -1,0 +1,9 @@
+""general
+set number		"show linenumbers
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:< 	 "show characters for invisible characters as return
+set softtabstop=4	"number of spaces for a TAB
+set cursorline          " highlight current line
+set wildmenu            " visual autocomplete for command menu
+
+
+
