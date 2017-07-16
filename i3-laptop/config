@@ -163,8 +163,9 @@ bar {
                 focused_workspace $gray2 $gray2 #FFFFFF
                 inactive_workspace $gray1 $gray1 #AAAAAA
         }
-	tray_output LVDS2
-	tray_output LVDS1
+	tray_output LVDS-2
+	tray_output LVDS-1
+	tray_output LDVS-0
 }
 exec --no-startup-id feh --bg-scale ~/Bilder/bg.png
 assign [class="Firefox"] 2
