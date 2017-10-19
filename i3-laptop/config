@@ -167,13 +167,14 @@ bar {
 	tray_output LVDS-1
 	tray_output LVDS-0
 }
-#exec --no-startup-id feh --bg-scale ~/Bilder/bg.png
+exec --no-startup-id feh --bg-scale ~/Bilder/bg.png
 assign [class="Firefox"] 2
 assign [class="Thunderbird"] 3
-assign [class="Kontact"] 3
+assign [class="Kontact"] 4
 assign [class="arandr"] 1
 assign [class="Steam"] 9
 exec --no-startup-id nm-applet
+#exec --no-startup-id firewall-applet
 
 #move workspaces to specific screen
 workspace 2 output HDMI3
