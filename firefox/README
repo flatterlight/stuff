@@ -1,0 +1,4 @@
+###link the file 'pref.js' as 'local-settings.js' & 'prefs.js'  to the location of firefox f.e.: '/usr/lib64/firefox/browser/defaults/profile/' and '/usr/lib64/firefox/browser/defaults/preferences/'
+link the 'autoconfig.js' to '/usr/lib64/firefox/browser/defaults/preferences/autoconfig.js'
+additionally link the file 'prefs.js' to the firefox install directory ('/usr/lib64/firefox/') as 'mozilla.cfg'
+
