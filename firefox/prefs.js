@@ -5,6 +5,10 @@ pref("browser.safebrowsing.downloads.enabled",false);
 pref("browser.safebrowsing.malware.enabled",false);
 //set paper size
 pref("print.postscript.paper_size","A4");
+//disable auto fill for forms
+pref("signon.autofillForms",false);
+//disable firefox internal password safe
+pref("signon.rememberSignons",false);
 //disable import of root CAs from system
 pref("security.certerrors.mitm.auto_enable_enterprise_roots",false);
 pref("security.enterprise_roots.enabled",false);
@@ -17,6 +21,10 @@ pref("geo.enabled", false);
 pref("browser.pocket.enabled", false);
 ///new
 pref("extensions.pocket.enabled", false);
+///other pocket settings/endpoints
+pref("extensions.pocket.site","localhost");
+pref("extensions.pocket.api","loalhost");
+pref("browser.newtabpage.activity-stream.discoverystream.endpoints","localhost");
 //disable firefox hello
 pref("loop.enabled", false);
 // enable do not track header
@@ -30,5 +38,8 @@ pref("datareporting.healthreport.uploadEnabled",false);
 // disable usage statistics.
 pref("toolkit.telemetry.unified",false);
 pref("toolkit.telemetry.enabled",false);
+pref("browser.newtabpage.activity-stream.telemetry.structuredIngestion.endpoint","loaclhost");
 // set minimum tls version
 pref("security.tls.version.min", 2);
+//delete last filename of printed document
+pref("print.print_to_filename","");
